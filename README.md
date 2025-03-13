@@ -1,8 +1,7 @@
 # Online_Library_Management_System
 Output
 ![image (3)](https://github.com/user-attachments/assets/dca9cb3c-2503-4b07-8886-a12325dd78e3)
-Borrower Table
-![image (4)](https://github.com/user-attachments/assets/8ae8d43e-4180-417f-843e-9768fb485c59)
+
 ER Diagram
 ![undefined (1)](https://github.com/user-attachments/assets/6b8fcf03-d57c-4708-8d4f-1a3f3878d1ab)
 
@@ -64,6 +63,18 @@ PENALTY_RATE NUMBER(20,2),
 PID NUMBER (20)     
 );
 ![image (1)](https://github.com/user-attachments/assets/f329fc68-bfba-4331-99cf-592485f416ed)
+
+Setting up primary keys & foreign keys:
+
+For table Book:
+ALTER TABLE Book ADD CONSTRAINT Book_PK PRIMARY KEY (ISBN);
+![image (9)](https://github.com/user-attachments/assets/c80868b2-9bae-40a3-a927-6022fc738c27)
+
+For table Borrower:
+ALTER TABLE Borrower ADD CONSTRAINT Borrower_PK PRIMARY KEY (BID);
+ALTER TABLE Borrower ADD CONSTRAINT ISBN FOREIGN KEY (ISBN) REFERENCES Book (ISBN);
+![image (3)](https://github.com/user-attachments/assets/67ff3320-9c15-447d-9bba-28646118bec3)
+
 
 
 
